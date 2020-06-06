@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>查看</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body>
+<a class="btn btn-sm btn-success" th:href="@{/book/list}" th:text="返回首页">返回首页</a>
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>书名</th>
+            <th>图书数量</th>
+            <th>介绍</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th th:text="${book.id}">1</th>
+                <td th:text="${book.name}">十万个为什么</td>
+                <td th:text="${book.count}">2</td>
+                <td th:text="${book.detail}">科普相关的书</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>
