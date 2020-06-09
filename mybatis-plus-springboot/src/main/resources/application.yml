@@ -1,0 +1,53 @@
+spring:
+  profiles:
+    active: dev # 选择环境
+
+# thymeleaf 配置
+#  thymeleaf:
+#    mode: HTML
+#    cache: false
+
+  mvc:
+    date-format: yyyy-MM-dd
+#    favicon:
+#      enabled: false # 关闭默认图标
+
+  # 数据库
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/mybatis_plus_demo?useUnicode=true&serverTimezone=UTC&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource # connect pool
+
+# mybatis 配置
+#mybatis:
+#  type-aliases-package: com.wcc.domain
+#  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+#  messages:
+#    basename: i18n/messages
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: update # update: 根据 Model 生成对应的表格
+#    show-sql: true
+
+#  servlet:
+#    multipart:
+#      max-file-size: 3GB # 文件上传大小
+#      max-request-size: 3GB
+
+#comment.avatar: /images/avatar.png
+
+#server:
+#  port: 8080
+
+# 日志
+logging:
+  level:
+    root: info
+    com:
+      wcc:
+        dao: debug
